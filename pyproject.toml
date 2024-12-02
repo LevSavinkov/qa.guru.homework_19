@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "qa-guru-homework-19"
+version = "0.1.0"
+description = ""
+authors = ["Lev Savinkov"]
+readme = "README.md"
+packages = [{ include = "qa" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+selene = "2.0.0.rc9"
+requests = "^2.32.3"
+pytest = "^8.3.3"
+python-dotenv = "^1.0.1"
+allure-pytest = "^2.13.5"
+appium-python-client = "^4.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = '--clean-alluredir --alluredir=./allure-results'
+testpaths = ["tests"]
